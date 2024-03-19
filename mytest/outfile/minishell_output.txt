@@ -1,0 +1,206 @@
+Commande: $PWD
+minishell: /home/dan/42/minishell_common: Is a directory
+
+Commande: echo $?
+0
+
+Commande: echo $"LOGNAME"
+LOGNAME
+
+Commande: echo $?
+0
+
+Commande: echo $'L'OGNAME
+LOGNAME
+
+Commande: echo $?
+0
+
+Commande: echo $"L"OGNAME
+LOGNAME
+
+Commande: echo $?
+0
+
+Commande: echo $LOGNAMEGNAME
+
+
+Commande: echo $?
+0
+
+Commande: echo $SHELL
+/bin/bash
+
+Commande: echo $?
+0
+
+Commande: echo $LOGNAMESHELL$
+$
+
+Commande: echo $?
+0
+
+Commande: echo $LOGNAMESHELL$ju
+
+
+Commande: echo $?
+0
+
+Commande: echo $LOGNAME$SHELL$
+dan/bin/bash$
+
+Commande: echo $?
+0
+
+Commande: echo $LOGNAME$SHELL$tr
+dan/bin/bash
+
+Commande: echo $?
+0
+
+Commande: echo $"$LOGNAME$SHELL$"
+dan/bin/bash$
+
+Commande: echo $?
+0
+
+Commande: echo $"$LOGNAME$  SHELL $"
+dan$  SHELL $
+
+Commande: echo $?
+0
+
+Commande: echo $"trrt$LOGNAME$  $SHELLtruc SHELL $ $thu"
+trrtdan$   SHELL $ 
+
+Commande: echo $?
+0
+
+Commande: echo $"trrt$LOGNAME$hyu  $SHELLtruc SHELL $ $thu"
+trrtdan   SHELL $ 
+
+Commande: echo $?
+0
+
+Commande: echo $"trrt$LOGNAME$hyufr$SHELLtruc SHELL $ $thu"
+trrtdan SHELL $ 
+
+Commande: echo $?
+0
+
+Commande: echo trrt$LOGNAME$  $SHELLtruc SHELL $ $thu
+trrtdan$ SHELL $
+
+Commande: echo $?
+0
+
+Commande: echo $"trrt$LOGNAME'Mach' $'LOGNAME' $SHELLtruc SHELL $ $thu"
+trrtdan'Mach' $'LOGNAME'  SHELL $ 
+
+Commande: echo $?
+0
+
+Commande: echo $"trrt$LOGNA'Mach' $LOGNAME'Mach'$LOG $'LOGNA'M''E' $SHELLtruc SHELL $ $thu"
+trrt'Mach' dan'Mach' $'LOGNA'M''E'  SHELL $ 
+
+Commande: echo $?
+0
+
+Commande: echo $"trrt$LOGNA'Mach'p lou$LOGNAME'Mach'$LOG $'LOGNA'M''E'42 $SHELLtruc SHELL $ $thu"
+trrt'Mach'p loudan'Mach' $'LOGNA'M''E'42  SHELL $ 
+
+Commande: echo $?
+0
+
+Commande: echo $USER
+dan
+
+Commande: echo $?
+0
+
+Commande: ls $PWD
+docs
+includes
+lib
+Makefile
+minishell
+mytest
+src
+tester_minishell
+valgrind.supp
+
+Commande: echo $?
+0
+
+Commande: ls $HOME
+42
+42-EXAM
+Angular_introduction
+angular_udemy_course
+Desktop
+Documents
+Downloads
+Doxyfile
+francinette
+html
+install_nvm.sh
+latex
+Music
+NetBeansProjects
+node-v18.14.2-linux-x64.tar.xz
+Pictures
+Public
+snap
+Templates
+Untitled Document 1
+Untitled Document 3
+Videos
+vim
+vscode-cpptools
+Workspaces
+
+Commande: echo $?
+0
+
+Commande: ls $HOME | rev
+24
+MAXE-24
+noitcudortni_ralugnA
+esruoc_ymedu_ralugna
+potkseD
+stnemucoD
+sdaolnwoD
+elifyxoD
+ettenicnarf
+lmth
+hs.mvn_llatsni
+xetal
+cisuM
+stcejorPsnaeBteN
+zx.rat.46x-xunil-2.41.81v-edon
+serutciP
+cilbuP
+pans
+setalpmeT
+1 tnemucoD deltitnU
+3 tnemucoD deltitnU
+soediV
+miv
+slootppc-edocsv
+secapskroW
+
+Commande: echo $?
+0
+
+Commande: $LOGNAME $LOGNAME
+dan: command not found
+
+Commande: echo $?
+0
+
+Commande: $LOGNAME$LOGNAME
+dandan: command not found
+
+Commande: echo $?
+0
+
