@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fill_command_tab_utils.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dan <dan@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 07:50:04 by dan               #+#    #+#             */
-/*   Updated: 2024/03/19 10:10:58 by dsylvain         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:29:44 by dan              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ char	**handle_joker(t_ast_nde **node, char **cmd_tab_tab, int *i)
 {
 	char	**tab;
 	int		j;
+	char	*str;
 
 	while (!is_separator(*node))
 	{
@@ -74,7 +75,11 @@ char	**handle_joker(t_ast_nde **node, char **cmd_tab_tab, int *i)
 			free(tab);
 		}
 		else if (!is_chevron(*node) && (*node)->token != CMD)
-			cmd_tab_tab[(*i)++] = get_node_str((*node)->child);
+		{
+			str = get_node_str((*node)->child);
+			if (!is_only_space(str))
+				cmd_tab_tab[(*i)++] = get_node_str((*node)->child);
+		}
 		*node = (*node)->sibling;
 	}
 	return (cmd_tab_tab);
