@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fill_command_tab_utils.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dan <dan@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 07:50:04 by dan               #+#    #+#             */
-/*   Updated: 2024/03/19 16:29:44 by dan              ###   ########.fr       */
+/*   Updated: 2024/03/19 16:52:40 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,13 @@ char	***add_redir_tabs(char ***cmd_tab, t_ast_nde **node, int *i)
 	return (cmd_tab);
 }
 
+void	add_node(char **str, t_ast_nde **node, char ***cmd_tab_tab, int *i)
+{
+	*str = get_node_str((*node)->child);
+	if (!is_only_space(*str))
+		(*cmd_tab_tab)[(*i)++] = get_node_str((*node)->child);
+}
+
 char	**handle_joker(t_ast_nde **node, char **cmd_tab_tab, int *i)
 {
 	char	**tab;
@@ -75,11 +82,7 @@ char	**handle_joker(t_ast_nde **node, char **cmd_tab_tab, int *i)
 			free(tab);
 		}
 		else if (!is_chevron(*node) && (*node)->token != CMD)
-		{
-			str = get_node_str((*node)->child);
-			if (!is_only_space(str))
-				cmd_tab_tab[(*i)++] = get_node_str((*node)->child);
-		}
+			add_node(&str, node, &cmd_tab_tab, i);
 		*node = (*node)->sibling;
 	}
 	return (cmd_tab_tab);
